@@ -1,0 +1,10 @@
+<form (keyup.enter)="callAPI()">
+  <input
+    #input
+    name="searchbar"
+    placeholder="Insert here your recipe"
+    type="text"
+    [(ngModel)]="inputValue"
+  />
+  <!-- (keyup)="callAPI()" -->
+</form>
