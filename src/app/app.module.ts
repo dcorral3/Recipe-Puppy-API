@@ -9,14 +9,21 @@ import { HttpClientModule } from '@angular/common/http';
 import { SearchbarComponent } from './searchbar/searchbar.component';
 import { RecipeComponent } from './recipe/recipe.component';
 import { HeaderComponent } from './header/header.component';
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
 @NgModule({
-  declarations: [AppComponent, SearchbarComponent, RecipeComponent, HeaderComponent],
+  declarations: [
+    AppComponent,
+    SearchbarComponent,
+    RecipeComponent,
+    HeaderComponent
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     FormsModule,
+    AngularFontAwesomeModule,
     HttpClientModule
   ],
   providers: [],

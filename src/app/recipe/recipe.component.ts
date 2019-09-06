@@ -13,4 +13,7 @@ export class RecipeComponent implements OnInit {
   ngOnInit() {
     this.ingredientsArray = this.recipe.ingredients.trim().split(',');
   }
+  onNavigate() {
+    window.open(this.recipe.href, '_blank');
+  }
 }

@@ -1,10 +1,18 @@
 <div class="card">
-  <div class="card-title">{{ recipe?.title }}</div>
+  <div class="card-header" [class.no-thumbnail]="recipe.thumbnail.length === 0">
+    <div class="card-title">{{ recipe?.title }}</div>
+    <img *ngIf="recipe.thumbnail.length > 0" src="{{ recipe.thumbnail }}" />
+  </div>
   <div class="card-content">
-    <ul>
+    <ol type="1">
       <li *ngFor="let ingredient of ingredientsArray">
         {{ ingredient }}
       </li>
-    </ul>
+    </ol>
+    <div class="card-buttons">
+      <button (click)="onNavigate()">
+        Link to recipe
+      </button>
+    </div>
   </div>
 </div>

@@ -1,11 +1,18 @@
 <app-header></app-header>
 <div class="main">
+  <div *ngIf="isLoading" class="lds-ripple">
+    <div></div>
+    <div></div>
+  </div>
   <!-- <app-recipe [recipe]="tmpRecipe"></app-recipe>
   <app-recipe [recipe]="tmpRecipe"></app-recipe> -->
-  <div *ngIf="recipes.length === 0">
-    <h4>
-      Just type the name of yout recipe and you will see the list right here
-    </h4>
+  <div *ngIf="recipes.length === 0 && !isLoading">
+    <p>
+      Just type the name of your recipe and you will see a list right here!
+      <br />;)
+    </p>
   </div>
-  <app-recipe *ngFor="let recipe of recipes" [recipe]="recipe"></app-recipe>
+  <div>
+    <app-recipe *ngFor="let recipe of recipes" [recipe]="recipe"></app-recipe>
+  </div>
 </div>
