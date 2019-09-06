@@ -11,6 +11,13 @@ import { Subscription } from 'rxjs';
 export class AppComponent implements OnInit {
   recipes: Recipe[];
   recipeSubscription: Subscription;
+  tmpRecipe: Recipe = {
+    href: 'http://www.recipezaar.com/Baked-Omelet-With-Broccoli-Tomato-325014',
+    ingredients:
+      'milk, cottage cheese, broccoli, cheddar cheese, basil, onion powder, eggs, garlic powder, roma tomato, salt',
+    thumbnail: 'http://img.recipepuppy.com/123889.jpg',
+    title: 'Baked Omelet With Broccoli &amp; Tomato'
+  };
   constructor(private apiService: ApiService) {
     this.recipes = [];
   }

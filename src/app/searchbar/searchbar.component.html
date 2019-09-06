@@ -1,10 +1,13 @@
-<form (keyup.enter)="callAPI()">
+<form (keyup.enter)="callAPI()" autocomplete="off">
   <input
     #input
     name="searchbar"
     placeholder="Insert here your recipe"
     type="text"
     [(ngModel)]="inputValue"
+    (focus)="input.placeholder = ''"
+    (blur)="input.placeholder = 'Insert here your recipe'"
+    uppercase
   />
   <!-- (keyup)="callAPI()" -->
 </form>

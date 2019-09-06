@@ -8,9 +8,10 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { SearchbarComponent } from './searchbar/searchbar.component';
 import { RecipeComponent } from './recipe/recipe.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
-  declarations: [AppComponent, SearchbarComponent, RecipeComponent],
+  declarations: [AppComponent, SearchbarComponent, RecipeComponent, HeaderComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

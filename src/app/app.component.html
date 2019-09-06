@@ -1,2 +1,11 @@
-<app-searchbar></app-searchbar>
-<app-recipe *ngFor="let recipe of recipes" [recipe]="recipe"></app-recipe>
+<app-header></app-header>
+<div class="main">
+  <!-- <app-recipe [recipe]="tmpRecipe"></app-recipe>
+  <app-recipe [recipe]="tmpRecipe"></app-recipe> -->
+  <div *ngIf="recipes.length === 0">
+    <h4>
+      Just type the name of yout recipe and you will see the list right here
+    </h4>
+  </div>
+  <app-recipe *ngFor="let recipe of recipes" [recipe]="recipe"></app-recipe>
+</div>

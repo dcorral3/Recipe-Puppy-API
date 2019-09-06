@@ -1,0 +1,25 @@
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 150px;
+  width: 100vw;
+  top: 0px;
+  left: 0px;
+  background-image: url('../../assets/header.jpg');
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.16), 0 3px 3px rgba(0, 0, 0, 0.16);
+  position: fixed;
+}
+
+h1 {
+  color: white;
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
