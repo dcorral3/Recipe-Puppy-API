@@ -3,8 +3,10 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 150px;
+  // margin-top: 150px;
+  transform: translateY(150px);
   padding: 1rem;
+  height: auto;
 }
 
 .recipe-list {

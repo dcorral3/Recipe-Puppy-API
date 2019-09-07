@@ -60,10 +60,10 @@ export class AppComponent implements OnInit {
     this.recipes = [];
   }
   ngOnInit() {
+    window.scroll(0, 0);
     this.recipeSubscription = this.apiService
       .getRecipeListener()
       .subscribe(recipes => {
-        window.scroll(0, 0);
         this.recipes = recipes;
         this.page = this.apiService.getPage();
         console.log(this.recipes);
