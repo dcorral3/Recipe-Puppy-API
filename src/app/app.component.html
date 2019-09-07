@@ -4,15 +4,32 @@
     <div></div>
     <div></div>
   </div>
-  <!-- <app-recipe [recipe]="tmpRecipe"></app-recipe>
-  <app-recipe [recipe]="tmpRecipe"></app-recipe> -->
-  <div *ngIf="recipes.length === 0 && !isLoading">
-    <p>
-      Just type the name of your recipe and you will see a list right here!
-      <br />;)
-    </p>
+  <div
+    class="pageText"
+    *ngIf="page !== 0 && recipes.length !== 0 && !isLoading"
+  >
+    <h1>Page {{ page }}</h1>
   </div>
-  <div>
-    <app-recipe *ngFor="let recipe of recipes" [recipe]="recipe"></app-recipe>
+  <div @list class="recipe-list">
+    <!-- <app-recipe [recipe]="tmpRecipe"></app-recipe>
+      <app-recipe [recipe]="tmpRecipe"></app-recipe> -->
+    <div *ngIf="recipes.length === 0 && !isLoading && page === 0">
+      <p>
+        Just type the name of your recipe and you will see a list right here!
+        <br />;)
+      </p>
+    </div>
+    <div *ngIf="recipes.length === 0 && !isLoading && page > 1">
+      <p>
+        UPS! No more pages, please go back or make a new query
+        <br />;)
+      </p>
+    </div>
+    <app-recipe
+      @items
+      *ngFor="let recipe of recipes"
+      [recipe]="recipe"
+    ></app-recipe>
   </div>
 </div>
+<app-next-page></app-next-page>

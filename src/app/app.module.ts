@@ -10,13 +10,15 @@ import { SearchbarComponent } from './searchbar/searchbar.component';
 import { RecipeComponent } from './recipe/recipe.component';
 import { HeaderComponent } from './header/header.component';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
+import { NextPageComponent } from './next-page/next-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SearchbarComponent,
     RecipeComponent,
-    HeaderComponent
+    HeaderComponent,
+    NextPageComponent
   ],
   imports: [
     BrowserModule,

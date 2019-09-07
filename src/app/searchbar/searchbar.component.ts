@@ -10,6 +10,6 @@ export class SearchbarComponent {
   inputValue = '';
   constructor(private apiService: ApiService) {}
   callAPI() {
-    this.apiService.getRecipe(this.inputValue);
+    this.apiService.getRecipe(this.inputValue, 1);
   }
 }

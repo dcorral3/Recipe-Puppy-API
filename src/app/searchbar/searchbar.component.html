@@ -1,4 +1,4 @@
-<form autocomplete="off">
+<form autocomplete="off" (keyup.enter)="callAPI()">
   <input
     #input
     name="searchbar"
@@ -7,7 +7,6 @@
     [(ngModel)]="inputValue"
     (focus)="input.placeholder = ''"
     (blur)="input.placeholder = 'Insert here your recipe'"
-    (keyup)="callAPI()"
   />
   <!-- (keyup)="callAPI()" -->
   <!-- (keyup.enter)="callAPI()" -->

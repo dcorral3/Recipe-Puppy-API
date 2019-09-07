@@ -1,9 +1,28 @@
 .main {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   margin-top: 150px;
   padding: 1rem;
+}
+
+.recipe-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: 600px) {
+    flex-direction: row;
+    text-align: center;
+    align-items: stretch;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+app-recipe {
+  margin: 1rem;
 }
 
 p {

@@ -1,0 +1,22 @@
+.arrow-next-box {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.514);
+}
+
+.arrow-next-box:hover {
+  cursor: pointer;
+}
+.arrow-prev-box {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.514);
+}
+
+.arrow-prev-box:hover {
+  cursor: pointer;
+}
